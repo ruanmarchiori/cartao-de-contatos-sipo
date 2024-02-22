@@ -43,21 +43,27 @@ img.avatar {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    padding: 3.7px;
-    border:#3441A8 solid 4px;
+    padding: 3.5px;
+    border:#3441A8 solid 7px;
+    background-color: orange;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 45px;
     margin-top: 24px;
     margin-bottom: 2px;
+}
+
+h3 {
+    margin-top: -5px;
 }
 
 .subtitle {
     font-family: 'Permanent Marker', cursive;
     font-weight: 400;
-    opacity: 0.8;
     font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: -30px;
 }
 
 ul {
@@ -75,10 +81,12 @@ ul li a {
     text-transform: uppercase;
     font-size: 14px;
 
-    margin-bottom: 16px;
-    border-radius: 50px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
 
-    transition: background 400ms;
+.criador {
+font-size: 15px;
 }
 
 footer:hover {
@@ -91,4 +99,60 @@ footer a {
 
 footer i:hover {
     color: var(--heart-color);
+}
+
+/* switch */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: var(--slider-radius);
+    margin: 10px auto;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: var(--slider-height);
+    width: var(--slider-height);
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
 }
